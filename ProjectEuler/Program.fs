@@ -3,6 +3,6 @@ open Problems
 
 [<EntryPoint>]
 let main argv =
-    printfn "%s" Problem8
+    printfn "%s" Problem9
     Console.ReadKey() |> ignore
     0 

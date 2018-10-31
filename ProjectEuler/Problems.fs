@@ -134,3 +134,14 @@ let Problem8 =
     |> Seq.max
     |> (fun x -> x.ToString())
 
+let Problem9 =
+    let append v x = Seq.map (fun vn -> (x, vn)) v
+    let carth v1 v2 = Seq.collect (fun x -> append v2 x) v1
+    
+    [1 .. 1000]
+    |> carth [1 .. 1000]
+    |> carth [1 .. 1000]
+    |> Seq.filter (fun (c, (a,b)) -> (a + b + c = 1000))
+    |> Seq.filter (fun (c, (a,b)) -> (a*a + b*b = c*c))
+    |> Seq.head
+    |> (fun x -> x.ToString())
