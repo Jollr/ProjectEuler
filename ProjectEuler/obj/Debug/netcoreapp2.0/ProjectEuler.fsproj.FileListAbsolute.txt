@@ -1,0 +1,8 @@
+C:\Dev\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.deps.json
+C:\Dev\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.runtimeconfig.json
+C:\Dev\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.runtimeconfig.dev.json
+C:\Dev\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.dll
+C:\Dev\ProjectEuler\ProjectEuler\bin\Debug\netcoreapp2.0\ProjectEuler.pdb
+C:\Dev\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.fsprojResolveAssemblyReference.cache
+C:\Dev\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.dll
+C:\Dev\ProjectEuler\ProjectEuler\obj\Debug\netcoreapp2.0\ProjectEuler.pdb
