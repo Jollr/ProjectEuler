@@ -1,22 +1,25 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "3cb8c3d53ede0d7d8c0dd5b4610f0b1b5132ac6a"
+    "signature": "2a3cce40ffad1aed363051b9051c2ff156f5fe39"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
       "ProjectEuler/1.0.0": {
         "dependencies": {
-          "FSharp.Core": "4.3.4"
+          "FSharp.Core": "4.5.2"
         },
         "runtime": {
           "ProjectEuler.dll": {}
         }
       },
-      "FSharp.Core/4.3.4": {
+      "FSharp.Core/4.5.2": {
         "runtime": {
-          "lib/netstandard1.6/FSharp.Core.dll": {}
+          "lib/netstandard1.6/FSharp.Core.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "2018.7.27.2"
+          }
         },
         "resources": {
           "lib/netstandard1.6/cs/FSharp.Core.resources.dll": {
@@ -71,12 +74,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "FSharp.Core/4.3.4": {
+    "FSharp.Core/4.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-P7+apCFDFR4BXir0mGPFp6B642XBrjS8IzICtBzHbibLvMev0vUdCONa4sWx61IYz/NKVnbKGSDJJWUlxPYCgw==",
-      "path": "fsharp.core/4.3.4",
-      "hashPath": "fsharp.core.4.3.4.nupkg.sha512"
+      "sha512": "sha512-Pe3EDp9oBjQ3c3fvZAJsw7XFLHECS3zn3P7MSqsJy3sFYR6jvTgxxnCFeePR1JHiWyZ3bm+RZAjchqVYk61adA==",
+      "path": "fsharp.core/4.5.2",
+      "hashPath": "fsharp.core.4.5.2.nupkg.sha512"
     }
   }
 }

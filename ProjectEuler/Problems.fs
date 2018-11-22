@@ -2,13 +2,13 @@
 
 open System
 
-let Problem1 =
+let Problem1 () =
    [1 .. 999]
    |> Seq.filter (fun n -> n % 3 = 0 || n % 5 = 0)
    |> Seq.reduce (fun a b -> a + b)
    |> (fun a -> a.ToString())
 
-let Problem2 =
+let Problem2 () =
     let lazyFib = 
         Seq.unfold 
             (fun (n1, n2) -> 
@@ -23,7 +23,7 @@ let Problem2 =
         |> Seq.reduce (fun a b -> a + b)
         |> (fun a -> a.ToString())
 
-let Problem3 =
+let Problem3 () =
     let input : int64 = 600851475143L
 
     let primesSteps = 
@@ -38,11 +38,11 @@ let Problem3 =
             )
             (list.Empty, input, 2L)
     
-    Seq.last primesSteps
-        |> Seq.map (fun a -> a.ToString())
-        |> String.concat ","
+    let last = Seq.last primesSteps
+    let strings = Seq.map (fun a -> a.ToString()) last
+    String.concat "," strings
 
-let Problem4 = 
+let Problem4 () = 
     Seq.collect 
         (fun n1 -> (Seq.map (fun n2 -> n1*n2) [ 100 .. 999 ]))
         [ 100 .. 999 ]
@@ -52,7 +52,7 @@ let Problem4 =
     |> Seq.filter (fun s -> String.Compare(s, new string(Array.rev (s.ToCharArray()))) = 0)
     |> String.concat ","
 
-let Problem5 = 
+let Problem5 () = 
     let isAwesome number = 
         Seq.map (fun divisor -> number % divisor) [2 .. 20]
         |> Seq.filter (fun n -> n > 0)
@@ -62,14 +62,14 @@ let Problem5 =
     let result = Seq.filter isAwesome candidates |> Seq.head
     result.ToString()
 
-let Problem6 = 
+let Problem6 () = 
     let sum = Seq.reduce (fun a b -> a + b) [1 .. 100] 
     let squareOfSums = sum * sum
     let sumOfSquares = Seq.reduce (fun a b -> a + b * b) [1 .. 100] 
     let result = squareOfSums - sumOfSquares
     result.ToString()
 
-let Problem7 =
+let Problem7 () =
     let isPrime n = 
         if (n % 2 = 0 || n % 3 = 0 || n % 5 = 0 || n % 7 = 0)
         then false
@@ -97,7 +97,7 @@ let Problem7 =
     |> (fun x -> x.ToString())
 
 
-let Problem8 =
+let Problem8 () =
     let input = 
         "73167176531330624919225119674426574742355349194934" +
         "96983520312774506326239578318016984801869478851843" +
@@ -134,7 +134,7 @@ let Problem8 =
     |> Seq.max
     |> (fun x -> x.ToString())
 
-let Problem9 =
+let Problem9 () =
     let append v x = Seq.map (fun vn -> (x, vn)) v
     let carth v1 v2 = Seq.collect (fun x -> append v2 x) v1
     
@@ -145,3 +145,35 @@ let Problem9 =
     |> Seq.filter (fun (c, (a,b)) -> (a*a + b*b = c*c))
     |> Seq.head
     |> (fun x -> x.ToString())
+
+//let Problem10 =
+//    let candidates = 
+//        Seq.unfold
+//            (fun (x, y) ->
+//                if x > 2000000
+//                then None
+//                else match y with
+//                    | 1 -> Some (x, (x + 2, 3))
+//                    | 3 -> Some (x, (x + 4, 7))
+//                    | 7 -> Some (x, (x + 2, 9))
+//                    | 9 -> Some (x, (x + 2, 1))
+//                    | 2 -> Some (x, (x + 1, 3))
+//            )
+//            (2, 2)
+
+//    let hasDivisors a b = 
+//        Seq.filter (fun n -> b % n = 0) a
+//        |> Seq.isEmpty
+//        |> not
+
+//    // kan niet met reduce?
+//    Seq.reduce 
+//        (fun a ( b : int ) ->
+//            if (hasDivisors b a)
+//            then a
+//            else (Seq.concat a b)
+//        )
+//        []
+//        candidates
+
+
